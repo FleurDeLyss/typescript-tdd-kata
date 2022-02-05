@@ -1,33 +1,34 @@
-// import hello from "../hello";
+import fizzbuzz from "../fizzbuzz";
 
 describe('FizzBuzz tdd test', () => {
-
-    beforeEach( () => {
+    let expected: string[];
+    beforeAll(async () => {
+        expected = ['1','2','Fizz','4','Buzz','Fizz','7','8','Fizz','Buzz','11','Fizz','13','14','FizzBuzz'];
 	})
-
-    it('write my first test', () => {
-        expect(1).toEqual(1)
+    it('Test fizzbuzz 3', async () => {
+        let result = fizzbuzz(3);
+        expect(result[0]).toEqual(expected[0]);
+        expect(result[1]).toEqual(expected[1]);
+        expect(result[2]).toEqual(expected[2]);
+    });
+    it('Test fizzbuzz 5', async () => {
+        let result = fizzbuzz(5);
+        expect(result[0]).toEqual(expected[0]);
+        expect(result[1]).toEqual(expected[1]);
+        expect(result[2]).toEqual(expected[2]);
+        expect(result[3]).toEqual(expected[3]);
+        expect(result[3]).toEqual(expected[4]);
+    });
+    it('Test fizzbuzz 15', async () => {
+        let result = fizzbuzz(15);
+        expect(result[0]).toEqual(expected[0]);
+        expect(result[1]).toEqual(expected[1]);
+        expect(result[2]).toEqual(expected[2]);
+        expect(result[3]).toEqual(expected[3]);
+        expect(result[14]).toEqual(expected[14]);
+    });
+    it('Test fizzbuzz 15', async () => {
+        let result = fizzbuzz(0);
+        expect(result).toBe('-1');
     });
 });
-
-
-// Given an integer n, return a string array answer (1-indexed) where:
-
-// answer[i] == "FizzBuzz" if i is divisible by 3 and 5.
-// answer[i] == "Fizz" if i is divisible by 3.
-// answer[i] == "Buzz" if i is divisible by 5.
-// answer[i] == i if non of the above conditions are true.
- 
-
-// Example 1:
-
-// Input: n = 3
-// Output: ["1","2","Fizz"]
-// Example 2:
-
-// Input: n = 5
-// Output: ["1","2","Fizz","4","Buzz"]
-// Example 3:
-
-// Input: n = 15
-// Output: ["1","2","Fizz","4","Buzz","Fizz","7","8","Fizz","Buzz","11","Fizz","13","14","FizzBuzz"]
