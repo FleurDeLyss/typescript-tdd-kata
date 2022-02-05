@@ -1,5 +1,5 @@
 export default function fizzbuzz(n: number) {
-    var array :(string | number)[] = new Array(n+1) ;
+    var array :(string | number)[] = new Array(n) ;
     for (let i = 0; i < n; i++) {
         if (i % 15) {
             array[i]= "buzzfizz"

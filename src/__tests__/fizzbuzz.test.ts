@@ -3,7 +3,7 @@ import fizzbuzz from "../fizzbuzz";
 describe('FizzBuzz tdd test', () => {
     let expected: string[];
     beforeAll(async () => {
-        expected = ['1','2','Fizz','4','Buzz','Fizz','7','8','Fizz','Buzz','11','Fizz','13','14','FizzBuzz'];
+        expected = ['0','1','2','Fizz','4','Buzz','Fizz','7','8','Fizz','Buzz','11','Fizz','13','14','FizzBuzz'];
 	})
     it('Test fizzbuzz 3', async () => {
         let result = fizzbuzz(3);
@@ -29,6 +29,6 @@ describe('FizzBuzz tdd test', () => {
     });
     it('Test fizzbuzz 15', async () => {
         let result = fizzbuzz(0);
-        expect(result).toBe('-1');
+        expect(result.length).toBe(0);
     });
 });
